@@ -6,26 +6,40 @@ import Waypoint from 'react-waypoint'
 import Layout from '../components/layout'
 import Header from '../components/Header'
 import Nav from '../components/Nav'
-import pic01 from '../assets/images/pic01.jpg'
 
 class Index extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      stickyNav: false
+      stickyNav: false,
+      pics: [
+        'https://cdn-images-1.medium.com/max/1026/1*3SVfBkNZI2f-sspiq59xcw.png',
+        'https://cdn-images-1.medium.com/max/614/1*SRL22ADht1NU4LXUeU4YVg.png',
+        'https://11m5ki43y82budjol1gjvv5s-wpengine.netdna-ssl.com/wp-content/uploads/2018/04/node-js-main.jpg',
+        'https://cdn-images-1.medium.com/max/1200/1*7AOhGDnRL2eyJMUidCHZEA.jpeg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png',
+        'https://cdn-images-1.medium.com/max/1200/1*eXIBeNlLhz4Pe6vDrYkXLQ.png',
+        'https://pbs.twimg.com/profile_images/997239666641223680/l7PYMOSm_400x400.jpg',
+      ],
     }
   }
 
-  _handleWaypointEnter= () => {
-    this.setState(() => ({ stickyNav: false }));
+  _handleWaypointEnter = () => {
+    this.setState(() => ({ stickyNav: false }))
   }
 
   _handleWaypointLeave = () => {
-    this.setState(() => ({ stickyNav: true }));
+    this.setState(() => ({ stickyNav: true }))
   }
 
   render() {
-
+    const skillspic = this.state.pics.map((el, i) => {
+      return (
+        <div className="skillslogo">
+          <img className="skillslogopic" src={el} />
+        </div>
+      )
+    })
     return (
       <Layout>
         <Helmet title="Gatsby Starter - Stellar" />
@@ -35,109 +49,168 @@ class Index extends React.Component {
         <Waypoint
           onEnter={this._handleWaypointEnter}
           onLeave={this._handleWaypointLeave}
-        >
-        </Waypoint>
+        />
         <Nav sticky={this.state.stickyNav} />
 
         <div id="main">
-
           <section id="intro" className="main">
             <div className="spotlight">
               <div className="content">
                 <header className="major">
-                  <h2>Ipsum sed adipiscing</h2>
+                  <h2>Chemical Engineer Turned Software Developer</h2>
                 </header>
-                <p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-                adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-                Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
-                <ul className="actions">
-                  <li><Link to="/generic" className="button">Learn More</Link></li>
-                </ul>
+                <p>
+                  Born and Raised in Clifton, NJ. I am a full stack developer
+                  now residing in the DFW who is open to relocating back to my
+                  hometown. I came to Dallas with my family after working in
+                  Ecommerce and in my previous field.
+                </p>
+                <p>
+                  I never thought I'd make a jump in Software after finishing a
+                  Bachelor's in Chemical Engineering from New Jersey Insituite
+                  of Technology until I came to Dallas and wanted a career
+                  change that has only made me more confident in my abilities to
+                  learn new skills. I have loved technology since I was very
+                  young building HTML websites.
+                </p>
+                <p>
+                  I went to work at the age of 14 with my immigrant parents,
+                  dedicated to always learn what I can and support my family. I
+                  love different sort of activities such as photography, soccer
+                  and traveling! Thank you for reading!
+                </p>
               </div>
-              <span className="image"><img src={pic01} alt="" /></span>
+              <span className="image">
+                <img
+                  src="https://i.postimg.cc/J0TmSC9r/pic.jpg"
+                  alt="Picture of Me"
+                />
+              </span>
             </div>
           </section>
 
           <section id="first" className="main special">
             <header className="major">
-              <h2>Magna veroeros</h2>
+              <h2>Stacks I Have Used</h2>
             </header>
-            <ul className="features">
-              <li>
-                <span className="icon major style1 fa-code"></span>
-                <h3>Ipsum consequat</h3>
-                <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-              </li>
-              <li>
-                <span className="icon major style3 fa-copy"></span>
-                <h3>Amed sed feugiat</h3>
-                <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-              </li>
-              <li>
-                <span className="icon major style5 fa-diamond"></span>
-                <h3>Dolor nullam</h3>
-                <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-              </li>
-            </ul>
+            <div className="features">{skillspic}</div>
             <footer className="major">
-              <ul className="actions">
-                <li><Link to="/generic" className="button">Learn More</Link></li>
-              </ul>
+              {/* <ul className="actions">
+                <li>
+                  <Link to="/generic" className="button">
+                    Learn More
+                  </Link>
+                </li>
+              </ul> */}
             </footer>
           </section>
 
           <section id="second" className="main special">
             <header className="major">
-              <h2>Ipsum consequat</h2>
-              <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-              posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+              <h2>Projects Worked On</h2>
+              <p>
+                "Learning is not attained by chance, it must be sought for with
+                ardor and attended to with dilgence"
+                <br />
+                -Abigail Adams
+              </p>
             </header>
-            <ul className="statistics">
-              <li className="style1">
-                <span className="icon fa-code-fork"></span>
-                <strong>5,120</strong> Etiam
-              </li>
-              <li className="style2">
-                <span className="icon fa-folder-open-o"></span>
-                <strong>8,192</strong> Magna
-              </li>
-              <li className="style3">
-                <span className="icon fa-signal"></span>
-                <strong>2,048</strong> Tempus
-              </li>
-              <li className="style4">
-                <span className="icon fa-laptop"></span>
-                <strong>4,096</strong> Aliquam
-              </li>
-              <li className="style5">
-                <span className="icon fa-diamond"></span>
-                <strong>1,024</strong> Nullam
-              </li>
-            </ul>
-            <p className="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
-            <footer className="major">
-              <ul className="actions">
-                <li><Link to="/generic" className="button">Learn More</Link></li>
-              </ul>
-            </footer>
+            <div className="entireprofileContainer">
+              <div className="projectContaier">
+                <a href="http://www.bookscout.live">
+                  <img
+                    src="https://i.postimg.cc/hPqNNzRM/pic1.png"
+                    alt=""
+                    className="projectimg"
+                  />
+                  <div>
+                    <h2>Book Scout</h2>
+                    <p>
+                      Book Scout is Amazon Book Selling app made for third party
+                      sellers to scan books quickly and easily. You start off by
+                      entering an ISBN number, which will hit Amazon's MWS API
+                      and return you neccassary data in order for users to make
+                      the best buying decision.
+                    </p>
+                    <p>
+                      It utilizes Material UI components, ChartJS and Inventory
+                      Tracking to to keep users up to date!
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div className="projectContaier">
+                <a href="http://www.awayfromhome.live">
+                  <img
+                    src="https://i.postimg.cc/L61sR05R/pic2.png"
+                    alt=""
+                    className="projectimg"
+                  />
+                  <div>
+                    <h2>awayFromHome</h2>
+                    <p>
+                      Having a hard time finding your right hotel? awayFromHome
+                      will help you solve your frustration by providing you
+                      hotels based off your travel dates in the locations you
+                      are visiting. (Only customized to Dallas).
+                    </p>
+                    <p>
+                      Front-End Engineer on this project which used new
+                      technologies such as React Hooks and Thunk. This was a
+                      team effort which was required task assignments, standups
+                      and usage of github issues.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
           </section>
 
           <section id="cta" className="main special">
             <header className="major">
-              <h2>Congue imperdiet</h2>
-              <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-              posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+              <h2>Where to Find Me</h2>
+              <p>
+                I am active through LinkedIn, Email, and Instagram
+                <br />
+                For a more direct contact:
+                <br />
+                <span> Call/Text: </span> 862-264-9889
+                <br />
+                <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=zaid.m.hassan@gmail.com&su=@Portfolio&tf=1">
+                  <span> Email: </span> zaid.m.hassan@gmail.com
+                </a>
+              </p>
             </header>
             <footer className="major">
               <ul className="actions">
-                <li><Link to="/generic" className="button special">Get Started</Link></li>
-                <li><Link to="/generic" className="button">Learn More</Link></li>
+                <li>
+                  <a href="https://www.instagram.com/iamzaidoooo/?hl=en">
+                    <img
+                      src=" https://clipart.info/images/ccovers/1522452763instagram-png-logo-with-text-and-icon.png"
+                      className="connectInstalogo"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/zaidmhassan">
+                    <img
+                      src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/linkedin_circle-512.png"
+                      className="connectLinkedInlogo"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/zaidohassan">
+                    <img
+                      src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                      className="connectGithublogo"
+                    />
+                  </a>
+                </li>
               </ul>
             </footer>
           </section>
-
         </div>
-
       </Layout>
     )
   }

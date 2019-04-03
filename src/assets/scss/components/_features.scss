@@ -6,55 +6,121 @@
 
 /* Features */
 
-	.features {
-		@include vendor('display', 'flex');
-		@include vendor('flex-wrap', 'wrap');
-		@include vendor('justify-content', 'center');
-		width: calc(100% + #{_size(element-margin)});
-		margin: 0 0 (_size(element-margin) * 1.5) (_size(element-margin) * -1);
-		padding: 0;
-		list-style: none;
+.features {
+  @include vendor('display', 'flex');
+  @include vendor('flex-wrap', 'wrap');
+  @include vendor('justify-content', 'center');
+  width: calc(100% + #{_size(element-margin)});
+  margin: 0 0 (_size(element-margin) * 1.5) (_size(element-margin) * -1);
+  padding: 0;
+  list-style: none;
+  display: flex;
 
-		li {
-			width: calc(#{(100% / 3)} - #{_size(element-margin)});
-			margin-left: _size(element-margin);
-			margin-top: (_size(element-margin) * 1.5);
-			padding: 0;
+  .skillslogo {
+    width: 15%;
+    margin: 5%;
+  }
+  .skillslogopic {
+    width: 100%;
+    height: 120px;
+  }
 
-			&:nth-child(1),
-			&:nth-child(2),
-			&:nth-child(3) {
-				margin-top: 0;
-			}
+  li {
+    width: calc(#{(100% / 3)} - #{_size(element-margin)});
+    margin-left: _size(element-margin);
+    margin-top: (_size(element-margin) * 1.5);
+    padding: 0;
 
-			> :last-child {
-				margin-bottom: 0;
-			}
-		}
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-top: 0;
+    }
 
-		@include breakpoint(medium) {
-			li {
-				width: calc(#{(100% / 2)} - #{_size(element-margin)});
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
 
-				&:nth-child(3) {
-					margin-top: (_size(element-margin) * 1.5);
-				}
-			}
-		}
+  @include breakpoint(medium) {
+    li {
+      width: calc(#{(100% / 2)} - #{_size(element-margin)});
 
-		@include breakpoint(small) {
-			width: 100%;
-			margin: 0 0 _size(element-margin) 0;
+      &:nth-child(3) {
+        margin-top: (_size(element-margin) * 1.5);
+      }
+    }
+    .skillslogo {
+      width: 30%;
+    }
+  }
 
-			li {
-				width: 100%;
-				margin-left: 0;
-				margin-top: _size(element-margin);
+  @include breakpoint(small) {
+    width: 100%;
+    margin: 0 0 _size(element-margin) 0;
 
-				&:nth-child(2),
-				&:nth-child(3) {
-					margin-top: _size(element-margin);
-				}
-			}
-		}
-	}
+    .skillslogo {
+      width: 40%;
+    }
+
+    li {
+      width: 100%;
+      margin-left: 0;
+      margin-top: _size(element-margin);
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-top: _size(element-margin);
+      }
+    }
+  }
+}
+
+.entireprofileContainer {
+  height: 100%;
+  display: flex;
+
+  .projectContaier {
+    height: 82vh;
+    width: 45vh;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin: auto;
+  }
+  .projectContaier:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  .projectimg {
+    width: 100%;
+    height: 27vh;
+  }
+  p {
+    margin: 5%;
+    height: 100%;
+    font-size: 16px;
+  }
+
+  h2 {
+    font-weight: 550;
+  }
+}
+
+a {
+  border-bottom: none;
+}
+
+.connectLinkedInlogo,
+.connectInstalogo,
+.connectGithublogo {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+
+.connectLinkedInlogo,
+.connectGithublogo {
+  margin-left: 5%;
+}
+
+span {
+  font-weight: 650;
+}
