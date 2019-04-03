@@ -170,14 +170,13 @@ class Index extends React.Component {
             <header className="major">
               <h2>Where to Find Me</h2>
               <p>
-                I am active through LinkedIn, Email, and Instagram
+                I am active through LinkedIn, Email, and Instagram,
                 <br />
-                For a more direct contact:
-                <br />
-                <span> Call/Text: </span> 862-264-9889
-                <br />
+                <div>For a more direct contact:</div>
+                <span> Call/Text: 862-264-9889 </span>
                 <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=zaid.m.hassan@gmail.com&su=@Portfolio&tf=1">
-                  <span> Email: </span> zaid.m.hassan@gmail.com
+                  <br />
+                  <div id="contact"> Email: zaid.m.hassan@gmail.com </div>
                 </a>
               </p>
             </header>
@@ -186,7 +185,7 @@ class Index extends React.Component {
                 <li>
                   <a href="https://www.instagram.com/iamzaidoooo/?hl=en">
                     <img
-                      src=" https://clipart.info/images/ccovers/1522452763instagram-png-logo-with-text-and-icon.png"
+                      src="https://instagram-brand.com/wp-content/themes/ig-branding/assets/images/ig-logo-email.png"
                       className="connectInstalogo"
                     />
                   </a>
@@ -202,7 +201,7 @@ class Index extends React.Component {
                 <li>
                   <a href="https://github.com/zaidohassan">
                     <img
-                      src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                      src="https://image.flaticon.com/icons/svg/25/25231.svg"
                       className="connectGithublogo"
                     />
                   </a>
