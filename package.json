@@ -1,8 +1,8 @@
 {
   "name": "gatsby-starter-stellar",
-  "description": "Gatsby Starter - Stellar by HTML5 UP",
+  "description": "Zaid Hassan - Software Developer",
   "version": "1.0.0",
-  "author": "Hunter Chang",
+  "author": "Zaid Hassan",
   "dependencies": {
     "gatsby": "^2.2.9",
     "gatsby-plugin-manifest": "^2.0.24",
