@@ -1,4 +1,4 @@
-# WELCOME TO MY PORTFOLIOo
+# WELCOME TO MY PORTFOLIO
 
 
 I am all about learning new skills and deep diving into new concepts / code that I am not familiar with. I love learning, researching and planning the next best move to reach my end goal. Of course with roadblocks, nothing comes easy but with some will and hard work there is always a way.
